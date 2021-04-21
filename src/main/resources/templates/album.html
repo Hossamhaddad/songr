@@ -6,16 +6,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+        <a href="/hello">Hello</a>
+        <a href="/addAlbum">Add Album</a>
+        <a href="/albums">Albums</a>
 
-<h2>Best Albums Ever</h2>
+</header>
+<main>
+    <h2>Best Albums Ever</h2>
 
-<div th:each="albums: ${albums}">
-    <img th:src=${albums.imageUrl}>
- <p th:text=${albums.artist}> </p>
-    <p th:text=${albums.title}>  </p>
-    <p th:text=${albums.songCount}> </p>
-    <p th:text=${albums.length}> </p>
-</div>
+    <div th:each="albums: ${albums}">
+        <img th:src=${albums.imageUrl}>
+        <p th:text=${albums.artist}> </p>
+        <p th:text=${albums.title}>  </p>
+        <p th:text=${albums.songCount}> </p>
+        <p th:text=${albums.length}> </p>
+    </div>
+</main>
+<footer>
+    <h3> All Right Reserved  </h3>
+</footer>
 
 </body>
 </html>
