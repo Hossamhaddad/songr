@@ -11,5 +11,9 @@ public class helloworld {
 public String showHelloWorld(){
     return "hello.html";
 }
+    @GetMapping("/")
+    public String showHomePage(){
+        return "home.html";
+    }
 
 }
