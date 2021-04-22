@@ -1,10 +1,8 @@
 package com.songr;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -17,6 +15,8 @@ public class Album {
     private String length;
     private String imageUrl;
 
+    @OneToMany(mappedBy = "album")
+    List<Song> songs;
 
     public Integer getId() {
         return id;

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>This is all the songs album</h1>
+<ul>
+    <li th:each="songs : ${songs}">
+        <div th:text="${song.title}"></div>
+        <div th:text="${song.length}"></div>
+        <div th:text="${song.trackNumber}"></div>
+    </li>
+</ul>
+</body>
+</html>
